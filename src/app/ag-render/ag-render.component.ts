@@ -4,7 +4,7 @@ import { ICellRendererParams } from 'ag-grid-community';
 
 @Component({
   selector: 'app-ag-render',
-  template: `<a href="">{{ params.value }}</a>`,
+  template: `#{{ value }}`,
   styles: [],
 })
 export class AgRenderComponent implements ICellRendererAngularComp {
@@ -12,7 +12,7 @@ export class AgRenderComponent implements ICellRendererAngularComp {
   constructor() {}
   public params!: ICellRendererParams;
   agInit(params: ICellRendererParams<any, any>): void {
-    this.value = params;
+    this.value = params.getValue;
   }
   refresh(params: ICellRendererParams<any, any>): boolean {
     return false;

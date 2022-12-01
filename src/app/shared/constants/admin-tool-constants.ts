@@ -13,9 +13,15 @@ export const ASSESMENTS_COLUMN_NAME = {
     { field: 'createdon', displayName: 'Created On', flex: 1 },
     {
       field: 'actions',
-      displayName: 'Actions',
+      displayName: 'Actions 1',
       flex: 1,
       cellRenderer: AgRenderComponent,
+      //   cellRendererSelector: (params: any) => {
+      //     return {
+      //       component: AgRenderComponent,
+      //       params: params.value,
+      //     };
+      //   },
     },
 
     // {
@@ -62,6 +68,9 @@ export const ASSESMENTS_COLUMN_HEADER: ColDef[] = [
     minWidth: 120,
     sortable: false,
     filter: false,
+    // cellRenderer: () => {
+    //   return `name`;
+    // },
   },
   {
     headerName: 'Actions',
@@ -70,6 +79,12 @@ export const ASSESMENTS_COLUMN_HEADER: ColDef[] = [
     minWidth: 120,
     sortable: true,
     filter: true,
-    cellRenderer: 'AgRenderComponent',
+
+    // cellRendererSelector: (params: any) => {
+    //   return {
+    //     component: AgRenderComponent,
+    //     params: params.value,
+    //   };
+    // },
   },
 ];
