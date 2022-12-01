@@ -1,4 +1,4 @@
-import { ColDef } from 'ag-grid-community';
+import { ColDef, ICellRendererParams } from 'ag-grid-community';
 import { AgRenderComponent } from 'src/app/ag-render/ag-render.component';
 
 export const ASSESMENTS_COLUMN_NAME = {
@@ -15,7 +15,12 @@ export const ASSESMENTS_COLUMN_NAME = {
       field: 'actions',
       displayName: 'Actions',
       flex: 1,
-      cellRenderer: AgRenderComponent,
+      cellRendererSelector: (params: ICellRendererParams) => {
+        return {
+          component: AgRenderComponent,
+          params: params.value,
+        };
+      },
     },
 
     // {
@@ -34,7 +39,7 @@ export const ASSESMENTS_COLUMN_NAME = {
 export const ASSESMENTS_COLUMN_HEADER: ColDef[] = [
   {
     headerName: 'Req ID',
-    field: 'reqid',
+    field: 'reqidq',
     width: 200,
     sortable: false,
     filter: false,
@@ -70,6 +75,5 @@ export const ASSESMENTS_COLUMN_HEADER: ColDef[] = [
     minWidth: 120,
     sortable: true,
     filter: true,
-    cellRenderer: 'AgRenderComponent',
   },
 ];
