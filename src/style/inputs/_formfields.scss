@@ -1,0 +1,42 @@
+@import '../settings/color';
+@import '../mixins/common';
+
+label,
+  input {
+    transition: all 0.1s;
+    touch-action: manipulation;
+    margin-bottom: 2px;
+  }
+
+  input,
+  select,
+  input[type="checkbox"],
+  input[type="radio"] {
+    padding: 0;
+    font-size: 16px;
+    border: 1px solid $blue-input-border;
+    font-family: inherit;
+    @include border-radius (4px);
+    padding: 10px 15px;
+    color: $gray;
+  }
+
+  input[type="radio"],
+  input[type="checkbox"] {
+    margin-right: 5px;
+    margin-left: 10px;
+    margin-bottom: 30px;
+    // &:first-child {
+    //   margin-left: 0;
+    // }
+  }
+
+.input__field--wrapper {
+  display: flex;
+  flex-flow: column;
+  margin-bottom: 1em;
+
+  .input__error {
+    border: 2px solid $error;
+  }
+}

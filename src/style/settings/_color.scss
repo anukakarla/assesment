@@ -1,0 +1,96 @@
+$themeColor-darkest: rgb(30, 105, 101);
+$themeColor-dark: rgb(14, 77, 146);
+$themeColor-bg: rgb(245,247,246);
+$themeColor-highlight: rgba(214,230,243,255);
+$blue-darkest: rgb(0, 74, 151);
+$blue-dark: rgb(0, 85, 184);
+$blue-light: rgb(0, 147, 201);
+$blue-bg: rgb(240, 247, 255);
+$blue-highlight: rgb(224, 235, 248);
+$blue-input-border: rgb(198, 216, 239);
+$blue-navBG: rgb(112, 183, 255);
+$blue-buttonBG: rgb(212, 232, 255);
+$nav-highlight: rgba(255,255,255,255);
+
+$blue-primary: rgb(0, 164, 228);
+
+//hover colors
+$blue-primary-hover: rgb(15, 99, 214);
+$blue-primary-active: $blue-darkest;
+
+$blue-secondary-active:rgba(0, 64, 221);
+$blue-secondary-border-active:$blue-secondary-active;
+
+$gray: rgb(31, 31, 31);
+$gray-light: rgb(179, 178, 177);
+$gray-inactive: rgb(202, 200, 200);
+$gray-dark: rgb(232, 232, 232);
+
+
+
+
+// Adding new color family
+$white: rgb(255, 255, 255);
+$black: rgb(0, 0, 0);
+
+$primary: rgb(0, 85, 184);
+$primary-1: rgb(0, 74, 151);
+$secondary: rgb(38, 202, 211);
+$secondary-1: rgb(0, 153, 168);
+
+$primary-bg: $white;
+$secondary-bg: $black;
+
+$blue-1: rgb(0, 101, 16);
+$blue-2: rgb(0, 147, 201);
+$blue-3: rgb(0, 155, 222);
+$blue-4: rgb(78, 193, 224);
+
+$gray-1: rgb(34, 34, 34);
+$gray-2: rgb(119, 119, 122);
+$gray-3: rgb(153, 153, 154);
+$gray-4: rgb(179, 178, 177);
+
+$accent-1: rgb(176, 0, 32);
+$accent-2: rgb(0, 139, 32);
+$accent-3: rgb(148, 111, 0);
+
+$gray-light: rgb(243, 243, 243);
+$dark-2:rgba(17, 24, 39, 1);
+$dark-3:rgba(119, 119, 122, 1);
+
+
+// Assigning color to element
+$body-bg: $white;
+$main-content-bg: $gray-light;
+$error: $accent-1;
+$success: $accent-2;
+
+$nav-bg: $white;
+$nav-text-inactive: $primary-1;
+$nav-text-active: $secondary-bg;
+$nav-link-active-bg: rgba($primary, 0.1);
+$nav-link-active-highlight: $blue-2;
+$nav-right-border: $gray-3;
+
+//ACCORDION
+$accordion-border: $gray-dark;
+
+// Text
+$heading-h1: $themeColor-dark;
+
+//BODY
+$bodyPanel-BG: $themeColor-bg;
+
+//INPUT
+$button-border: $themeColor-dark;
+$button-text: $themeColor-dark;
+$button-bg: $themeColor-highlight;
+
+$button-Primary-bg: $themeColor-dark;
+$button-primary-hover:$blue-primary-hover;
+$button-primary-active:$blue-darkest;
+
+$button-secondary-bg: $white;
+$button-secondary-hover: $themeColor-highlight;
+$button-secondary-active: $blue-secondary-active;

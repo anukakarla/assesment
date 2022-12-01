@@ -1,0 +1,35 @@
+<app-header id="admin_header"></app-header>
+<div class="component_container">
+  <main class="container_main">
+    <div class="admin_header">
+      <div class="admin_headings">
+        <h1>Assessments</h1>
+      </div>
+    </div>
+    <div class="admin_bgcontent">
+      <div class="admin_content">
+        <div class="header_row">
+          <h2>Assessment List</h2>
+          <collab-comp-button
+            type="button"
+            [buttonConfig]="Add"
+          ></collab-comp-button>
+        </div>
+        <div class="assessment_table" *ngIf="isResultLoaded">
+          <!-- <collab-comp-table-grid
+            [rowData]="rowData"
+            [columnNames]="columnNames"
+            [hidePagination]="true"
+          >
+          </collab-comp-table-grid> -->
+          <app-table-grid
+            [rowData]="rowData"
+            [components]="components"
+            [columnNames]="columnNames"
+            [hidePagination]="true"
+          ></app-table-grid>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>

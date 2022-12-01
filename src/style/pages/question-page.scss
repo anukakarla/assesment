@@ -1,0 +1,194 @@
+@import "/src/style/inputs/button";
+@import "/src/style/inputs/formfields";
+@import "/src/style/settings/color";
+@import "/src/style/text/text";
+@import "/src/style/settings/screenBreakpoints";
+
+.qs_header{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-bottom: 3px solid gray;
+    padding: 1vh 2vw;
+}
+
+.qs_headings{
+    h1,h2{
+        font-size: 1em;
+        font-weight: 600;
+        margin-bottom: 0;
+    }    
+}
+
+.qs_progress{
+    width:20%;    
+}
+
+@media screen and (max-width: 768px) and (min-width: 250px) {
+    .section_stepper {
+      display: none;
+    }
+    .submit_btn{
+        margin-left: auto;
+    }
+    .qs_form{
+        border:0px !important;
+        border-radius: 0px !important;
+    }
+}
+
+.qs-wrapper{
+    display: flex;
+    flex-direction: row;
+
+    .section_stepper{
+        flex:10;
+    }
+
+    .section_form{
+        display: flex;
+        flex-direction: column;
+        flex: 75;
+        background-color: #f5f5fb;
+    }
+
+    .qs_form{
+        background-color: $white;
+        padding: 2vh 2vw;
+        border: #f5f5fb 20px solid;
+        border-radius: 30px;
+        min-height: 75vh;
+    }
+
+    .section_headertext{
+        font-size: 1.5em;
+        font-weight: 600;
+    }
+
+    .section_warningtext{
+        font-size: 0.75em;
+        font-weight: 400;
+        font-style: italic;
+        &::before{
+            content: '*';
+            font-size: 1.25em;
+            font-weight: 900;
+            color: $error;
+            margin-right: 5px;
+        }
+    }
+
+    .question_wrapper{
+        margin-top: 2vh;
+    }
+
+    .option_wrapper{
+        margin-top: 1vh;
+        margin-bottom: 3vh;
+        padding-left: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .qs_text{
+        display: flex;
+        margin-left: 20px;
+        .mandatory_star{
+            &::before{
+                content: '*';
+                font-size: 1em;
+                font-weight: 900;
+                color: $error;
+            }
+        }
+    }
+    
+    .qs_number{
+        margin-left: -20px;
+        width: 33px;
+        white-space: nowrap;
+        font: normal normal 600 1rem/1rem Avenir, Helvetica, Arial, sans-serif;
+        .qs_index_mandatory{
+            font-weight: 600;
+            padding-left: 2px;
+        }
+        .qs_index_optional{
+            font-weight: 600;
+            padding-left: 0px;
+        }
+    }
+    
+    .qs_question-title{
+        display: block;
+        font: normal normal 600 1rem/1.15rem Avenir, Helvetica, Arial, sans-serif;
+        margin-bottom: 2px;
+    }
+    
+    .qs_option{
+        display: block;
+        margin-left: 20px;
+    }
+    
+    input.qs_radio{
+        display: inline;
+        margin-left: -20px;
+        margin-bottom: 1.25vh;
+    }
+
+    .qs-text_wrapper{
+        margin-left: 30px;
+    }
+
+    .qs-text_wrapper-opt{
+        margin-left: 20px;
+    }
+}
+
+@media screen and (max-width: 600px) and (min-width: 250px) {
+    textarea{
+        width:250px;
+    }
+}
+
+.modal_content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    min-height: 250px;
+}
+
+@media screen and (max-width: 992px) and (min-width: 250px) {
+    .modal_content{
+        flex-direction: row;
+        flex-wrap: nowrap;
+        column-gap: 10px;
+        min-height: unset !important;
+    }
+    .submit_modal{
+        zoom: 0.5;
+    }
+}
+
+.tick_icon{
+      //background: url(../../../../assets/SRE_Assessment/Check.svg);
+      background-size: contain;
+      width: 80px;
+      height: 80px;
+}
+
+.submit_modal{
+    z-index: 2;
+}
+
+.form_submitbtn{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 0 2vw 2vh 2vw;
+}
+
+.clear_btn{
+    margin-left: auto;
+}

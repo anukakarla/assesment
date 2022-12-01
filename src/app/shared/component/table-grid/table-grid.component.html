@@ -1,0 +1,30 @@
+<div *ngIf="rowData && rowData.length">
+  <ag-grid-angular
+    class="ag-theme-alpine"
+    id="ag-grid"
+    [pagination]="true"
+    [paginationPageSize]="paginationPageSize"
+    [components]="components"
+    [rowData]="rowData"
+    [columnDefs]="columnHeader"
+    (gridReady)="onGridReady($event)"
+    [suppressRowClickSelection]="false"
+    [defaultColDef]="defaultColDef"
+    [suppressPaginationPanel]="true"
+    [enableRangeSelection]="true"
+    [frameworkComponents]="frameworkComponents"
+    [overlayNoRowsTemplate]="noRowsTemplate"
+    [context]="context"
+    [suppressMenuHide]="true"
+    (selectionChanged)="onSelectionChanged($event)"
+    [suppressKeyboardEvent]="suppressKeyboardEvent"
+  >
+  </ag-grid-angular>
+  <!-- <collab-comp-table-grid-pagination
+    *ngIf="rowData?.length && !hidePagination"
+    [gridApi]="gridApi"
+  ></collab-comp-table-grid-pagination> -->
+</div>
+<!-- <span *ngIf="rowData && rowData.length < 1">No records found</span> -->
+
+<!-- domLayout='autoHeight' -->

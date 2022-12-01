@@ -1,0 +1,162 @@
+@import '/src/style/inputs/button';
+@import '/src/style/inputs/formfields';
+@import '/src/style/settings/color';
+@import '/src/style/text/text';
+
+.container_main {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.upper-half {
+    //min-height: max(768px, 87vh);
+    min-height: calc(100vh - 120px);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background: transparent url("/assets/landing_page.png") 0% 0% no-repeat padding-box;
+    background-size: cover;
+    position: relative;
+    margin-top: -4px;
+    padding: 2vh 5vw 2vh 5vw;
+
+    .upper-half-left-text {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        width: 50%;
+    }
+
+    .text-label {
+        display: flex;
+        text-align: left;
+        font: 400 normal normal 2.5em/3rem $font-regular;
+        color: $white;
+        margin-top: 50px;
+    }
+
+    @media screen and (max-width: 600px) {
+        .text-label {
+            margin-top: 30px;
+            margin-bottom: 30px;
+            height: auto;
+            width: calc(100vw - 50px);
+        }
+    }
+
+    .upper-right-half {
+        display: flex;
+        flex-direction: column;
+        flex-shrink: 0;
+        justify-content: space-between;
+        background-color: white;
+        position: relative;
+        padding: 30px 20px 20px 20px;
+        border-radius: 14px;
+        min-width: 450px;
+        margin: 25px 0;
+    }
+
+    @media screen and (max-width: 600px) {
+        .upper-right-half {
+            box-sizing: border-box;
+            min-width: unset;
+            width: 100%;
+            margin-bottom: 30px;
+        }
+    }
+
+    .invalid_data {
+        font-size: small;
+        color: $error;
+        font-weight: 600;
+        padding: 1px;
+        padding-left: 5px;
+    }
+
+    .upper-right-text {
+        display: flex;
+        flex-direction: column;
+        font: normal normal 600 1rem/1em $font-regular;
+        min-height: 550px;
+
+        .header_text {
+            font: normal normal normal 400 1.75em/1em $font-regular;
+            margin-bottom: 20px;
+        }
+
+        .header_warning {
+            font-size: 0.75em;
+            font-weight: 600;
+            margin-bottom: 16px;
+
+            &::before {
+                content: '*';
+                color: $error;
+                font-size: 1.25em;
+                font-weight: 600;
+                padding-right: 2px;
+
+            }
+        }
+    }
+
+    .upper-right-button {
+        margin-right: 0px;
+        margin-left: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font: normal normal 600 1rem/1em $font-regular;
+        position: relative;
+        margin-top: auto;
+    }
+
+    .landing_page_label {
+        font-family: $font-regular ;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1em;
+        line-height: 140%;
+        margin-top: 5px;
+
+        &::before {
+            content: '*';
+            color: $error;
+            font-size: 1em;
+            font-weight: 600;
+            padding-right: 2px;
+        }
+    }
+
+    .landing_page_input {
+        margin-bottom: 4px;
+
+        &::placeholder {
+            color:$dark-2 !important;
+            opacity: 1;
+        }
+
+        &.ng-touched.ng-invalid {
+            border: solid 1px $error;
+        }
+    }
+
+    input.landing_page_input:-webkit-autofill {
+        background-color: transparent !important;
+        -webkit-box-shadow: 0 0 0 50px white inset;
+    }
+}
+
+.footer {
+    color: #fff;
+    background-color: #1f1f1f;
+    font-size: 12px;
+    margin: 0;
+    text-align: center;
+    padding: 15px 20px;
+    height: 50px;
+}

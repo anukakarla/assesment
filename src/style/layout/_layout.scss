@@ -1,0 +1,133 @@
+@import "../settings/color";
+@import "../mixins/flexbox";
+@import '../mixins/common';
+
+%gutterOffset {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+body {
+  // background-color: #f7f7fa;
+  background-color: $white;
+}
+
+footer {
+  padding: 20px 0;
+  font-size: 0.5em;
+  text-align: center;
+  @extend %gutterOffset;
+
+}
+
+nav {
+  background-color: $blue-darkest;
+  padding: 10px 4px;
+  @include border-radius (4px);
+
+}
+
+%gutterOffset {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.container {
+  @include flexbox;
+  @include flex-direction (column);
+  min-height: 100vh;
+  background-color: $white;
+  // box-shadow: 0 0 10px 0px rgb(216, 216, 216);
+  // clip-path: inset(0px -10px 0px -10px);
+
+  &__headerWrapper {
+    @extend %gutterOffset;
+  }
+
+  &__mainContent {
+    margin-left: 10px;
+
+    &--body {
+      @include flexbox;
+      @include flex-direction (row);
+      margin-top: 10px;
+      height: calc(100% - 65px);
+
+      &>:first-child {
+        flex: 1;
+      }
+    }
+
+    h1 {
+      padding: 10px;
+      background-color: $blue-darkest;
+      color: $white;
+      font-size: 24px;
+      @include border-radius (4px);
+    }
+
+    &Wrapper {
+      flex: 1;
+      @extend %gutterOffset;
+      @include flexbox;
+      @include flex-direction (row);
+
+      >* {
+        flex: 1;
+      }
+
+      nav {
+        @include flex (0 0 250px);
+      }
+
+    }
+
+    &--background {
+      background-color: $blue-bg;
+      padding: 7px 10px 20px 10px;
+      @include border-radius (4px);
+
+      h2 {
+        padding: 10px;
+        background-color: $blue-highlight;
+        // color: $white;
+        font-size: 20px;
+        @include border-radius (4px);
+      }
+    }
+    &--columnLeft {
+      margin-right: 10px;
+    }
+  }
+
+  &__header {
+    @include flexbox;
+    @include flex-direction(row);
+    @include justify-content (space-between);
+    @include flex (1);
+    @include align-items (center);
+    padding: 10px 20px;
+
+    .header__logo {
+      width: 75px;
+      height: auto;
+    }
+
+    .header__user {}
+
+    .header__notification {}
+
+  }
+
+  &--fileUpload__wrapper {
+    @include flexbox;
+    @include flex-direction (row);
+    @include align-items (flex-start);
+    @include justify-content (space-around);
+    padding: 20px 0;
+
+    >* {
+      flex: 1;
+    }
+  }
+}

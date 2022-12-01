@@ -1,0 +1,35 @@
+/*
+ * Font initialization
+ */
+$i: 0;
+$font-regular: Avenir,sans-serif;
+$font-fallback: Helvetica, Arial, sans-serif;
+
+//* creating font map *//
+
+$ava-font-map: (
+        'h1': 48px,
+        'h2': 34px,
+        'h3': 24px,
+        'h4': 20px,
+        'h5': 18px,
+        'h6': 16px,
+        'body': 16px,
+        'body--small': 14px,
+        'button': 16px,
+        'none': 0
+);
+
+
+$colors: (blue-dark: $blue-darkest,
+        blue-light: $blue-light,
+        error: $error);
+
+
+$textWeight: (bold: 800,
+        regular: 300);
+
+//$textSize: (large: 24px,
+//        medium: 20px,
+//        regular: 16px
+//);
