@@ -19,6 +19,10 @@ import { ICellRendererParams } from 'ag-grid-community';
         align-items: center;
         height: 100%;
       }
+      img {
+        filter: invert(18%) sepia(89%) saturate(2476%) hue-rotate(196deg)
+          brightness(118%) contrast(119%);
+      }
     `,
     `
       button {
