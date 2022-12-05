@@ -37,7 +37,7 @@ export const generateColumns = (
             maxWidth: key.maxWidth,
             cellRenderer: key.field === 'status' ? 'statusIndicator' : '',
             cellRendererSelector:
-              key.field === 'actions' ? key.cellRendererSelector : '',
+              key.field === 'actions' ? key.cellRendererSelector : '', //added cell renderer selector.
             // cellRendererSelector:key
             // checkboxSelection: index === 0 ? true : false,
             // headerCheckboxSelection: index === 0 ? true : false,

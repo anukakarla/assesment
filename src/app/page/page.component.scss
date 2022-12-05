@@ -1,13 +1,17 @@
 @import "src/style/pages/admin_common.scss";
-.admin_header {
-  height: 50px;
+// .admin_header {
+//   height: 50px;
 
-  .admin_headings {
-    h1 {
-      margin: 0;
-    }
-  }
+//   // .admin_headings {
+//   //   h1 {
+//   //     margin: 0;
+//   //   }
+//   // }
+// }
+.icon-Add icon--xl {
+  font-size: 0.75rem;
 }
+
 .admin_content {
   &::-webkit-scrollbar {
     width: 8px;

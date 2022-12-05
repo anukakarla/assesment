@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+@import "./style/reset/_sanitize.css"; // Applied to provide consistent, cross-browser default styling of HTML elements alongside useful defaults
+// @import "./style/reset/_reboot.css"; // Provides many HTML elements with somewhat opinionated styles using only element selectors.
+@import "./style/base";
+@import "./style/layout/grid";
+@import "./style/layout/layout";
+@import "./style/text/text";
+@import "./style/layout/modal";
+
+@import "~@collab/comp-library/style/icons/icons.css";
+// @import "@collab/comp-library/style/inputs/formfields";
+
+.body--wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 0px;
+}
+
+app-root {
+  width: 100%;
+}

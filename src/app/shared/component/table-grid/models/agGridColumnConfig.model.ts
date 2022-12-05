@@ -3,7 +3,7 @@ export interface ColumnConfigI {
     field: string;
     displayName: string;
     cellRenderer?: any;
-    cellRendererSelector?: any;
+    cellRendererSelector?: any; //new field has been added.
     flex?: any;
     width?: any;
     minWidth?: any;

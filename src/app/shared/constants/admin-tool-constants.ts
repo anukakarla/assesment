@@ -13,9 +13,10 @@ export const ASSESMENTS_COLUMN_NAME = {
     { field: 'createdon', displayName: 'Created On', flex: 1 },
     {
       field: 'actions',
-      displayName: 'Actions 1',
+      displayName: 'Actions',
       flex: 1,
       cellRendererSelector: (params: ICellRendererParams) => {
+        //we cannot add component in cellrenderer
         return {
           component: AgRenderComponent,
           params: params.value,

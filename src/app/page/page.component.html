@@ -12,7 +12,8 @@
           <h2>Assessment List</h2>
           <collab-comp-button
             type="button"
-            [buttonConfig]="Add"
+            [buttonConfig]="AddAssessmentConfig"
+            (onBtnClick)="openModal()"
           ></collab-comp-button>
         </div>
         <div class="assessment_table" *ngIf="isResultLoaded">
@@ -24,13 +25,60 @@
           </collab-comp-table-grid> -->
           <app-table-grid
             [rowData]="rowData"
-            [defaultColDef]="defaultColDef"
-            [components]="components"
-            [columnNames]="columnNames"
             [hidePagination]="true"
+            [columnNames]="columnNames"
+            [defaultColDef]="defaultColDef"
           ></app-table-grid>
         </div>
       </div>
     </div>
+
+    <app-modal
+      class="submit_modal"
+      tabindex="-1"
+      role="dialog"
+      id="CreateAssessmentModal"
+      [modalConfig]="CreateAssessmentModal"
+      (onClick)="submitForm()"
+      trapFocus
+    >
+      <div class="modal_content">
+        <form [formGroup]="assessmentFG">
+          <ng-container formArrayName="assessmentList">
+            <ng-container
+              *ngFor="
+                let assessment of assessmentList.controls;
+                let index = index
+              "
+            >
+              <div [formGroupName]="index" class="assessment_fields">
+                <div class="input__field--wrapper assessment_name">
+                  <input
+                    type="text"
+                    formControlName="assessment"
+                    placeholder="Enter Assessment Name Here"
+                  />
+                </div>
+                <div class="assessment_actions">
+                  <span
+                    class="icon-Add icon--xl"
+                    (click)="addAssessment()"
+                  ></span>
+                  <span
+                    class="icon-Remove icon--xl"
+                    [ngStyle]="{
+                      opacity: this.assessmentList.length > 1 ? 1 : 0
+                    }"
+                    (click)="removeAssessment(index)"
+                  ></span>
+                </div>
+              </div>
+            </ng-container>
+          </ng-container>
+        </form>
+      </div>
+    </app-modal>
+    <!-- </main> -->
+    <!-- </div> -->
   </main>
 </div>

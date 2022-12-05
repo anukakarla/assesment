@@ -2,7 +2,7 @@ export const ASSESSMENT_DUMMY_DATA = [
   {
     reqid: '1',
     assessmentname: 'SRE',
-    createdby: 'Anusha 1',
+    createdby: 'Anusha ',
     createdon: '29/11/2022',
     actions: '',
   },
@@ -11,6 +11,6 @@ export const ASSESSMENT_DUMMY_DATA = [
     assessmentname: 'SRE',
     createdby: 'Anusha',
     createdon: '29/11/2022',
-    actions: 'work',
+    actions: '',
   },
 ];
